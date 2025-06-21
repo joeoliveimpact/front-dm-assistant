@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Front Test</title>
+  <script src="https://unpkg.com/@frontapp/plugin-sdk@1.12.0/dist/sdk.min.js"></script>
+</head>
+<body>
+  <button onclick="testFront()">Test Front SDK</button>
+  <div id="result"></div>
+  <script>
+    function testFront() {
+      if (typeof Front !== "undefined") {
+        document.getElementById('result').textContent = "Front SDK loaded!";
+        console.log('Front object:', Front);
+      } else {
+        document.getElementById('result').textContent = "Front is NOT defined!";
+      }
+    }
+  </script>
+</body>
+</html>
